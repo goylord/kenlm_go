@@ -1,4 +1,4 @@
-package kenlm
+package kenlm_go
 
 /*
 #cgo LDFLAGS: -lkenlm -lkenlm_builder -lkenlm_filter -lkenlm_util -llzma -lbz2 -lz -lstdc++  -ldl -lm
