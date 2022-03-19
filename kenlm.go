@@ -14,12 +14,12 @@ type KenlmModel struct {
 	model unsafe.Pointer
 }
 
-func (km *KenlmModel) Score(sentence string) C.float {
-	return C.score(km.model, C.CString(sentence))
+func (km *KenlmModel) Score(sentence string) float64 {
+	return float64(C.score(km.model, C.CString(sentence)))
 }
 
-func (km *KenlmModel) Perplexity(sentence string) C.float {
-	return C.score(km.model, C.CString(sentence))
+func (km *KenlmModel) Perplexity(sentence string) float64 {
+	return float64(C.score(km.model, C.CString(sentence)))
 }
 
 func LoadModel(filepath string) *KenlmModel {
