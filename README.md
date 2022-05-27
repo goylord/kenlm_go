@@ -9,6 +9,7 @@ mkdir -p build
 cd build
 cmake ..
 make -j 4
+make install
 ```
 
 ### 一些运行依赖（未筛选）
